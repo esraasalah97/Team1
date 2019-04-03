@@ -6,7 +6,7 @@ public class StateTest {
 	State s=new State();
 
 	public void StateTestCase1()
-	{
+	{ //no_testcase
 		boolean bVF=s.bValidateFailure();
 		boolean bVHP=s.bValidateHighPerformance();
 		boolean bVLP=s.bValidateLowPerformance();
