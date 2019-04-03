@@ -3,14 +3,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import vehicle.app.Global;
 import vehicle.app.State;
-
+package vehicle.app;
 
 
 public class StateTest {
 	
 	@Test
 	public void StateTestCase1()
-	{ //no_testcase
+	{ //no->no->yes
 		boolean bVF=s.bValidateFailure();
 		boolean bVHP=s.bValidateHighPerformance();
 		boolean bVLP=s.bValidateLowPerformance();
