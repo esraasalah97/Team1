@@ -1,13 +1,12 @@
-package Vechile.test;
+package vehicle.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import Vechile.app.State;
-import Vechile.hal.Temp;
-
+import vehicle.app.State;
+import vehicle.hal.*;
 class StateTest2 {
 	 State myState ;
 	 
