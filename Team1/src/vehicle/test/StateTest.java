@@ -1,19 +1,27 @@
+package Vechile.test;
 
-package vehicle.test;
-import vehicle.app.State;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class StateTest {
-	State s=new State();
+import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-	public void StateTestCase1()
-	{
-		boolean bVF=s.bValidateFailure();
-		boolean bVHP=s.bValidateHighPerformance();
-		boolean bVLP=s.bValidateLowPerformance();
-		if( bVF==false && bVHP==false && bVLP==false )
-		{
-	    s. vidGoToNextState();
-	    assertEquals(3,Global.iState);
-		}
+import Vechile.app.State;
 
-		 }
+
+class StateTest {
+	
+	 State myState ;
+	 
+	 @BeforeEach
+	 void init() {
+		 myState= new State();
+	 }
+	@Test
+	void testTempReadCalling(){
+		System.out.println("Temp Function Calling Test Case Started");
+		myState.bValidateHighPerformance();
+		assertEquals(1,State.validateCall);
+	}
+
+}
