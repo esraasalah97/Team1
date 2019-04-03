@@ -1,7 +1,10 @@
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-package vehicle.app;
+import vehicle.app.Global;
+import vehicle.app.State;
+
+
 
 public class StateTest {
 	
