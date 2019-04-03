@@ -4,7 +4,7 @@ public class State {
 
 	public  void vidGoToNextState()
 {
-   try
+   
 }
 
 }
