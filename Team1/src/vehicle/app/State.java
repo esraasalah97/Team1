@@ -4,7 +4,9 @@ import vehicle.hal.Temp;
 
 public class State {
 	
-	public static int validateseq;
+	public static int validateseq1;
+	
+	public static int validateseq2;
 	public static int validateCall;
 	public static int validateCallFailure=0;
 	public static int validateCallLowP=0;
@@ -13,20 +15,22 @@ public class State {
 	
 	public boolean bValidateFailure() {
 		validateCallFailure++;
-		validateseq=1;
+		validateseq1=1;
+		validateseq2=0;
 		return true;
 	}
 	public boolean bValidateLowPerformance()
 	{
 		validateCallLowP++;
-		validateseq=2;
+		validateseq1=2;
+		validateseq2=0;
 		return false;
 	}
 	
 	
 	public boolean bValidateHighPerformance() {
 		validateCallHighP++;
-		validateseq=3;
+		validateseq2=3;
 		
 		 int temp_reading = Temp.iReadT1();
 		 if(temp_reading<=50) {

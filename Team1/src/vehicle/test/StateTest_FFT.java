@@ -4,7 +4,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-import org.junit.jupiter.api.Test;
 
 import vehicle.app.Global;
 import vehicle.app.State;
@@ -21,7 +20,9 @@ public class StateTest_FFT {
 		 try { assertAll(
 		    ()->	assertFalse(bVF),
 		    ()->	assertFalse(bVHP),
-		   () -> assertEquals(2,State.validateseq),
+		    ()->	assertTrue(bVLP),
+		    () -> assertEquals((2,State.validateseq1)&&(0,State.validateseq2)),
+			   //?????
 		   //?????
 		 () -> assertEquals(1,State.validateCallLowP),
 		    ()->	assertEquals(1,Global.iState)

@@ -25,7 +25,7 @@ public class StateTest_TFF {
 			    ()->	assertTrue(bVF),
 			    ()->	assertFalse(bVHP),
 			    ()->	assertFalse(bVLP),
-			   () -> assertEquals(2,State.validateseq),
+			   () -> assertEquals((1,State.validateseq1)&&(0,State.validateseq2)),
 			   //?????
 			    () -> assertEquals(3,State.validateCallFailure),
 			    ()->	assertEquals(4,Global.iState)
