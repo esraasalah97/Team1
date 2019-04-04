@@ -15,11 +15,11 @@ public class StateTestNoCase {
 		boolean bVF= s.bValidateFailure();
 		boolean bVHP= s.bValidateHighPerformance();
 		boolean bVLP= s.bValidateLowPerformance();
-		assertAll{
-		assertFalse(bVF), 
-		assertFalse(bVHP), 
-	        assertFalse(bVLP)
-		};
+		assertAll(
+		()->assertFalse(bVF), 
+		()->assertFalse(bVHP), 
+	        ()->assertFalse(bVLP)
+		);
 	    s.vidGoToNextState();
 	    assertEquals(3,Global.iState);
 		
