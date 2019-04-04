@@ -17,8 +17,12 @@ public class StateTest {
 		boolean bVF=s.bValidateFailure();
 		boolean bVHP=s.bValidateHighPerformance();
 		boolean bVLP=s.bValidateLowPerformance();
-		if(assertEquals(false,bVF) & assertEquals(true,bVHP) & assertEquals(false,bVLP ))
-		{
+		assertAll{
+		assertFalse(bVF), 
+		assertTrue(bVHP), 
+	        assertFalse(bVLP)
+		};
+		
 	    s.vidGoToNextState();
 	    assertEquals(2,Global.iState);
 		}
