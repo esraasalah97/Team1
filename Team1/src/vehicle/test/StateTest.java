@@ -25,6 +25,6 @@ public class StateTest {
 		
 	    s.vidGoToNextState();
 	    assertEquals(2,Global.iState);
-		}
+		
 }
 }
