@@ -3,32 +3,34 @@ package vehicle.app;
 import vehicle.hal.Temp;
 
 public class State {
-	public static int validateCall1 = 0 ;
-	public static int validateCall2= 0 ;
-	public static int validateCall3 = 0 ;
+	
 	public static int validateseq;
+	public static int validateCall;
+	public static int validateCallFailure=0;
+	public static int validateCallLowP=0;
+	public static int validateCallHighP=0;
 	
 	
 	public boolean bValidateFailure() {
-		validateCall3++;
+		validateCallFailure++;
 		validateseq=1;
-		return false;
+		return true;
 	}
 	public boolean bValidateLowPerformance()
 	{
-		validateCall1++;
+		validateCallLowP++;
 		validateseq=2;
 		return false;
 	}
 	
 	
 	public boolean bValidateHighPerformance() {
-		validateCall2++;
+		validateCallHighP++;
 		validateseq=3;
 		
 		 int temp_reading = Temp.iReadT1();
 		 if(temp_reading<=50) {
-			 return true;
+			 return false;
 		 }
 		 else {
 			 return false;
@@ -36,7 +38,7 @@ public class State {
 	}
 	public void vidGoToNextState()
 	{
-		Global.iState=4;
+		Global.iState=1;
 	
 	}
 	

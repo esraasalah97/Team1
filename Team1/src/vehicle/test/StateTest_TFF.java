@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import vehicle.app.Global;
-import vehicle.app.state;
+import vehicle.app.State;
 import vehicle.hal.LCD;
 
 
@@ -15,19 +15,19 @@ public class StateTest_TFF {
 
 	@Test
 		public void StateTestCase3()
-			{  state s=new state();
-				boolean bVF=s.bValidateFailure();
-				boolean bVHP=s.bValidateHighPerformance();
-				boolean bVLP=s.bValidateLowPerformance();
+			{  State s=new State();
+				boolean bVF=s.bValidateFailure();//seq=1, call=1
+				boolean bVHP=s.bValidateHighPerformance();//3 2 
+				boolean bVLP=s.bValidateLowPerformance();//2 3 
 			
 			    s. vidGoToNextState();
 			    assertAll(
 			    ()->	assertTrue(bVF),
 			    ()->	assertFalse(bVHP),
 			    ()->	assertFalse(bVLP),
-			   () -> assertEquals(1,s.validateSeq),
+			   () -> assertEquals(2,State.validateseq),
 			   //?????
-			    () -> assertEquals(1,s.validateCall3),
+			    () -> assertEquals(3,State.validateCallFailure),
 			    ()->	assertEquals(4,Global.iState)
 			    );
 			}    
