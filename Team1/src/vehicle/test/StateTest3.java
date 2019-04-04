@@ -23,8 +23,8 @@ class StateTest3 {
 		// Soft Assertion to check all the assert statements even if one failed.
 		assertAll(
 			() ->	assertTrue(Temp.iReadT1()>50,"Temp Reading is greater than 50"),
-			() ->	assertFalse(myState.bValidateHighPerformance(),"HIGH PERFORMANCE")
-				);
+	/*??*/		() ->	assertFalse(myState.bValidateHighPerformance(),"HIGH PERFORMANCE")
+	/*where's the call validation*/			);
 	}
 
 }

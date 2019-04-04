@@ -24,7 +24,7 @@ class StateTest2 {
 		// Soft Assertion to check all the assert statements even if one failed.
 		assertAll(
 			() ->	assertTrue(Temp.iReadT1()<=50,"Temp Reading is less than 50"),
-			() ->	assertTrue(myState.bValidateHighPerformance(),"LOW PERFORMANCE")
+	/*??*/		() ->	assertTrue(myState.bValidateHighPerformance(),"LOW PERFORMANCE")
 				);
 		
 	}
