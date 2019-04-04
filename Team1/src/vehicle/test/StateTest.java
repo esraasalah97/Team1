@@ -1,15 +1,13 @@
 package vehicle.test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 import vehicle.app.Global;
 import vehicle.app.State;
-
-
 public class StateTest {
 	State s=new State();
 	@Test

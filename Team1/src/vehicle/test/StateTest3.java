@@ -1,11 +1,15 @@
 package vehicle.test;
+
+import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import vehicle.app.State;
 import vehicle.hal.*;
 
@@ -22,7 +26,7 @@ class StateTest3 {
 		myState.bValidateHighPerformance();
 		// Soft Assertion to check all the assert statements even if one failed.
 		assertAll(
-			() ->	assertTrue(Temp.iReadT1()>50,"Temp Reading is greater than 50"),
+			() ->	assertTrue(Temp.iReadT1()>50,"Temp Reading is greater than 50") ,
 	/*??*/		() ->	assertFalse(myState.bValidateHighPerformance(),"HIGH PERFORMANCE")
 	/*where's the call validation*/			);
 	}
